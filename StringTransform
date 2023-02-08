@@ -1,0 +1,6 @@
+public class StringTransform {
+    transformString showString = new showString();
+    StringBuilder result = new StringBuilder();{
+        return result.toString().trim();
+    }
+}
