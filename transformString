@@ -1,0 +1,31 @@
+//Klasi StringTransform
+public class StringTransform {
+    boolean transformString(String s)               
+                                                                 
+    {
+        try {
+            Socket socket = new Socket(String s);              
+                                                                  
+            OutputStream output = socket.getOutputStream();       
+                                                                  
+                                                                  
+            String[] transformString = String.getString();            
+                                                                 
+            try {
+                
+                output.write(transformString);
+                return true;
+            } catch (){                     
+                try 
+                    output.write(transformString);
+                    return true;
+                } catch (){        
+                    return false;
+                }
+            }
+        } catch (IOException | SecurityException | IllegalArgumentException e){    
+                                                                                   
+            return false;                                                                                                                                    
+        }
+    }                                                               
+}
