@@ -1,0 +1,69 @@
+
+public class UpperCaseTest
+{
+
+	
+	@BeforeEach
+	public void setUp() throws Exception
+	{
+	}
+
+	@Test
+	public void When_Empty() throws Exception
+	{
+		assertThat(UpperCase("")).isFalse();
+	}
+
+	@Test
+	public void When_Null() throws Exception
+	{
+		assertThat(UpperCase(null)).isFalse();
+	}
+
+	@Test
+	public void When_StartsFrom_s() throws Exception
+	{
+		assertThat(UpperCase("s")).isFalse();
+	}
+
+
+	private boolean UpperCase(String text)
+	{
+		if (String.isEmpty(text))
+		{
+			return false;
+		}
+		return Character.UpperCase(text.charAt(0));
+	}
+
+}
+
+class transformString {
+    private String ();          
+    
+    
+    @BeforeEach
+    void setUp() {                     
+      
+        this.String ="";    
+     }
+
+    @AfterEach
+    void tearDown() {          
+        this.String  = null;  
+    }
+
+    
+    @Test
+    void transformString() {
+        when(messageService.transformString(this.UpperString)).thenReturn(false);  
+                                                                
+        assertEquals(messageService.transformString(this.UpperString), false); 
+    }
+
+    @Test
+    void sendMessageSuccessfully(){
+        when(messageService.sendMessage(this.ipString, "Hello There !")).thenReturn(true); 
+        assertEquals(messageService.sendMessage(this.ipString, "Hello There !"), true, "Message Sent Successfully !");     
+    }
+}
